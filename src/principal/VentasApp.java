@@ -1,5 +1,6 @@
 package principal;
 
+import gestionProductos.GestionProductos;
 import input.Input;
 import output.Output;
 import validador.Validador;
@@ -16,7 +17,10 @@ public class VentasApp {
     private static int opcionMenu;
     private static Output output;
     private static Input input;
+
+    private static GestionProductos gProductos;
     public static void main(String[] args) {
+        gProductos = new GestionProductos();
         output = new Output();
         input = new Input();
         quiereSeguir= true;
@@ -52,9 +56,11 @@ public class VentasApp {
         switch (opcionMenu){
             case AGREGARPRODUCTO ->{
 
+                gProductos.agregarProducto();
 
             }
             case MOSTRARPRODUCTOS ->{
+                gProductos.listarProductos();
 
             }
             case VENDERPRODUCTOS ->{

@@ -31,4 +31,15 @@ public class GestionProductos {
 
     }
 
+    public  void listarProductos(){
+        System.out.println("Referencia \t" + "Unidades\t" + "Creado el\t" + "Modificado el" );
+        for (Producto lista: listaProductos){
+            System.out.println(lista.getReferencia()+"      \t" + lista.getNumunidades()+"     \t" + lista.getFechaAlta()+"     \t" + lista.getFechaModificacion() );
+        }
+
+
+
+
+    }
+
 }

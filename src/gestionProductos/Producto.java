@@ -19,14 +19,34 @@ public class Producto {
         this.FechaModificacion = null;
     }
 
+    public String getReferencia() {
+        return referencia;
+    }
+
+    public byte getNumunidades() {
+        return numunidades;
+    }
+
+    public String getFechaAlta() {
+        return fechaAlta;
+    }
+
+    public String getFechaModificacion() {
+        return FechaModificacion;
+    }
+
+    public void setFechaModificacion(String fechaModificacion) {
+        FechaModificacion = fechaModificacion;
+    }
+
     @Override
     public String toString() {
-        return "Producto{" +
-                "id=" + id +
-                ", referencia='" + referencia + '\'' +
-                ", numunidades=" + numunidades +
-                ", fechaAlta='" + fechaAlta + '\'' +
-                ", FechaModificacion='" + FechaModificacion + '\'' +
-                '}';
+        return
+                 id +
+                 referencia +
+                 numunidades +
+                 fechaAlta +
+                 FechaModificacion
+                ;
     }
 }
