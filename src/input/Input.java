@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Input {
 
     String palabra;
-    int numero;
+    byte numero;
 
     Scanner sc = new Scanner(System.in);
 
@@ -14,7 +14,7 @@ public class Input {
         palabra = sc.nextLine();
     }
     private void numero(){
-        numero =Integer.parseInt( sc.nextLine());
+        numero =Byte.parseByte( sc.nextLine());
     }
 
     public String getString(){
@@ -22,7 +22,7 @@ public class Input {
         return palabra;
     }
 
-    public int getInt(){
+    public byte getInt(){
         numero();
         return numero;
     }

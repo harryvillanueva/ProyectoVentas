@@ -18,5 +18,17 @@ public class GestionProductos {
         input = new Input();
     }
 
+    public  void agregarAlumno(){
+        output.mostrarMensajeReferencia();
+        String referencia = input.getString();
+        output.mostrarMensajeUnidades();
+        byte unidades = input.getInt();
+        output.mostrarMensajefechaAlta();
+        String fechaAlta = input.getString();
+
+        listaProductos.add(new Producto(referencia,unidades,fechaAlta));
+
+
+    }
 
 }
