@@ -65,7 +65,7 @@ public class GestionProductos {
         if (encontrado){
 
 
-            output.mostrarMensajeComprar();
+            output.mostrarMensajeVender();
             byte cantidadComprar = input.getInt();
 
             output.mostrarMensajefechaModificacion();
@@ -74,6 +74,53 @@ public class GestionProductos {
             byte cantidadUnidadesActual = listaProductos.get(i).getNumunidades();
 
             int cantidadFinal = cantidadUnidadesActual - cantidadComprar;
+            listaProductos.get(i).setNumunidades((byte)cantidadFinal);
+
+        }
+
+
+
+
+
+
+
+    }
+
+
+
+
+    public  void comprarProductos(){
+        listarProductos();
+
+        int i =0;
+        boolean encontrado = false;
+
+        output.mostrarMensajeReferencia();
+        String referencia = input.getString();
+
+
+        while (!encontrado && i < listaProductos.size()){
+
+            if (listaProductos.get(i).getReferencia().equals(referencia)){
+                encontrado = true;
+            }else {
+                i++;
+            }
+
+        }
+
+        if (encontrado){
+
+
+            output.mostrarMensajeComprar();
+            byte cantidadComprar = input.getInt();
+
+            output.mostrarMensajefechaModificacion();
+            listaProductos.get(i).setFechaModificacion("20250321");
+
+            byte cantidadUnidadesActual = listaProductos.get(i).getNumunidades();
+
+            int cantidadFinal = cantidadUnidadesActual + cantidadComprar;
             listaProductos.get(i).setNumunidades((byte)cantidadFinal);
 
         }

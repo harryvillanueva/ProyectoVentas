@@ -69,6 +69,7 @@ public class VentasApp {
             }
             case COMPRARPRODUCTOS ->{
 
+                gProductos.comprarProductos();
             }
             case SALIR ->{
                 quiereSeguir =false;
