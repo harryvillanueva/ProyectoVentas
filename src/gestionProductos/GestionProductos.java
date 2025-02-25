@@ -18,7 +18,7 @@ public class GestionProductos {
         input = new Input();
     }
 
-    public  void agregarAlumno(){
+    public  void agregarProducto(){
         output.mostrarMensajeReferencia();
         String referencia = input.getString();
         output.mostrarMensajeUnidades();
