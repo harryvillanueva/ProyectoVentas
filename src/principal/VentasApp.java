@@ -65,6 +65,7 @@ public class VentasApp {
             }
             case VENDERPRODUCTOS ->{
 
+                gProductos.venderProductos();
             }
             case COMPRARPRODUCTOS ->{
 

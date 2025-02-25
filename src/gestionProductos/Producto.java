@@ -39,6 +39,10 @@ public class Producto {
         FechaModificacion = fechaModificacion;
     }
 
+    public void setNumunidades(byte numunidades) {
+        this.numunidades = numunidades;
+    }
+
     @Override
     public String toString() {
         return

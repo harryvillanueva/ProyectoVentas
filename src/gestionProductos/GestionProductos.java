@@ -42,4 +42,48 @@ public class GestionProductos {
 
     }
 
+    public  void venderProductos(){
+        listarProductos();
+
+        int i =0;
+        boolean encontrado = false;
+
+        output.mostrarMensajeReferencia();
+        String referencia = input.getString();
+
+
+        while (!encontrado && i < listaProductos.size()){
+
+            if (listaProductos.get(i).getReferencia().equals(referencia)){
+                encontrado = true;
+            }else {
+                i++;
+            }
+
+        }
+
+        if (encontrado){
+
+
+            output.mostrarMensajeComprar();
+            byte cantidadComprar = input.getInt();
+
+            output.mostrarMensajefechaModificacion();
+            listaProductos.get(i).setFechaModificacion("20250321");
+
+            byte cantidadUnidadesActual = listaProductos.get(i).getNumunidades();
+
+            int cantidadFinal = cantidadUnidadesActual - cantidadComprar;
+            listaProductos.get(i).setNumunidades((byte)cantidadFinal);
+
+        }
+
+
+
+
+
+
+
+    }
+
 }
